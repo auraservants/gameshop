@@ -20,6 +20,21 @@ ul{
     list-style-type: none;
 }
 
+h1{
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    padding-bottom: 3rem;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+
+/*HEADER*/
+
 header{
     background-color: #222222;
 }
@@ -43,10 +58,16 @@ nav ul a{
     font-weight: 700;
     font-size: 1rem;
 }
+nav ul a:hover{
+    color: #ffffff50;
+}
 
 li i{
     color: #D01418;
+}
 
+li i:hover{
+    color: #7055aa;
 }
 
 .hero{
@@ -63,16 +84,13 @@ li i{
     justify-content: center;
 }
 
-.hero-title h1{
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #ffffff;
-    padding-bottom: 3rem;
-}
-
-.hero-title span{
+h1 span:first-child{
     color: #D01418;
 }
+
+/*.hero-title span{
+    color: #D01418;
+}*/
 
 .hero-btn a{
     background-color: #D01418;
@@ -83,7 +101,9 @@ li i{
     padding: 16px 61px 16px 61px;
 }
 
-/* FEATURES PRODUCTS */
+
+
+/*FEATURES PRODUCTS*/
 
 
 .features-products, .bestsellers-products{
@@ -142,9 +162,7 @@ h4.card-price{
     padding-bottom: 20px;
 }
 
-
-
-
+/*BEST SELLERS PRODUCTS*/
 .bestsellers-container{
     display: flex;
     justify-content: space-evenly;
@@ -164,15 +182,6 @@ h4.card-price{
     position: relative;
 }
 
-.bestseller-card1 a, .bestseller-card2 a{
-    font-size: 25px;
-    color: #F3F3F3;
-    position: absolute;
-    top: 45%;
-    right: 5%;
-}
-
-
 .bestseller-card2{
     background-image: url(../images/banner\ 1\ \(1\).png);
     background-size: cover;
@@ -183,6 +192,19 @@ h4.card-price{
     position: relative;
 }
 
+.bestseller-card1 a, .bestseller-card2 a{
+    font-size: 25px;
+    color: #F3F3F3;
+    position: absolute;
+    top: 45%;
+    right: 5%;
+}
+
+.bestseller-card1 a:hover, .bestseller-card2 a:hover{
+    text-decoration: underline;
+}
+
+/*FOOTER*/
 
 footer{
     background-color: #222222;
@@ -196,6 +218,7 @@ footer{
     max-width: 1400px;
     padding: 40px 0px 40px 0px;
 }
+
 .social-title{
     color: #F3F3F3;
     font-size: 25px;
@@ -204,6 +227,12 @@ footer{
 
 .footer-main-social img{
     padding: 10px 20px 10px 20px;
+    animation-name: social;
+    transition: .3s ease-in-out;
+}
+
+.footer-main-social img:hover{
+    transform: scale(1.3);
 }
 
 .footer-legal{
@@ -213,8 +242,18 @@ footer{
     padding: 10px;
 }
 
-
-
+.fa-arrow-circle-up{
+    display: none;
+    font-size: 30px;
+    position: fixed;
+    bottom: 5%;
+    right: 1%;
+    animation-delay: 10s;
+    color: #C4C4C4;
+}
+.fa-arrow-circle-up:hover{
+    color: #7055aa;
+}
 
 
 @media screen (min-width: 460px){
